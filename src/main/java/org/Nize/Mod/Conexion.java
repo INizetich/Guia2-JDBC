@@ -6,10 +6,10 @@ import java.sql.SQLException;
 
 public class Conexion {
 
-    private static final String URL = "jdbc:mysql://172.16.1.64:3306/";
-    private static final String DB_NAME = "Guia2_JDBC";
-    private static final String USER = "bdd1";
-    private static final String PASS = "bdd1";
+    private static final String URL = "jdbc:mysql://shinkansen.proxy.rlwy.net:21319/";
+    private static final String DB_NAME = "railway";
+    private static final String USER = "root";
+    private static final String PASS = "sGUVFxlVsHsJjQbfjxRPCMoByvfrSEPf";
 
 
     public static Connection getConexion(){

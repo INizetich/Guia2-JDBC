@@ -54,7 +54,7 @@ public class AlumnoDAO {
             ResultSet rs = stm.executeQuery(sql);
 
             while(rs.next()){
-                 alumno = new Alumno(rs.getString("nombre"),rs.getString("apellido"),rs.getInt("edad"),rs.getString("email"));
+                 alumno = new Alumno(rs.getInt("id"),rs.getString("nombre"),rs.getString("apellido"),rs.getInt("edad"),rs.getString("email"));
             }
 
         }catch (SQLException e){
@@ -77,6 +77,33 @@ public class AlumnoDAO {
             e.printStackTrace();
         }
         return mapAlumnos;
+    }
+
+
+    public boolean modificarAlumno(int id, int edad){
+        String sql = "UPDATE alumnos SET edad = ? WHERE id ="+id;
+
+        try(PreparedStatement preparedStatement = conn.prepareStatement(sql)){
+            preparedStatement.setInt(1,edad);
+            preparedStatement.executeUpdate();
+            return true;
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+
+        return false;
+    }
+
+
+    public boolean eliminarAlumno(int id){
+        String sql = "DELETE FROM alumnos WHERE id ="+id;
+        try(PreparedStatement preparedStatement = conn.prepareStatement(sql)){
+            preparedStatement.executeUpdate();
+            return true;
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return false;
     }
 
 

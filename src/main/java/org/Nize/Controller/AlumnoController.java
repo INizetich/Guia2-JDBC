@@ -32,4 +32,13 @@ public class AlumnoController {
     public Alumno alumnoPorId(int idalumno){
         return alumnoDAO.alumnoPorId(idalumno);
     }
+
+
+    public boolean modificarAlumno(int id, int edad){
+        return alumnoDAO.modificarAlumno(id, edad);
+    }
+
+    public boolean eliminarAlumno(int id){
+        return alumnoDAO.eliminarAlumno(id);
+    }
 }

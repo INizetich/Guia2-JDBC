@@ -13,6 +13,14 @@ public class Direccion {
         this.alumnoId = alumnoId;
     }
 
+
+    public Direccion(int id,  String calle, int altura,int alumnoId) {
+        this.id = id;
+        this.alumnoId = alumnoId;
+        this.altura = altura;
+        this.calle = calle;
+    }
+
     public int getId() {
         return id;
     }
@@ -53,11 +61,10 @@ public class Direccion {
 
     @Override
     public String toString() {
-        return "Direccion{" +
-                "id=" + id +
-                ", calle='" + calle + '\'' +
-                ", altura=" + altura +
-                ", alumnoId=" + alumnoId +
-                '}';
+        return
+                "id: " + id+"\n" +
+                "calle: " + calle + "\n" +
+                "altura: " + altura +"\n" +
+                "alumno ID: " + alumnoId + "\n";
     }
 }

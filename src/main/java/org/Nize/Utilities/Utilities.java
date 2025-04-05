@@ -6,7 +6,7 @@ public class Utilities {
 
     public static void mostrarCargando() {
         try {
-            for (int i = 0; i < 5; i++) {  // 10 ciclos de la animación
+            for (int i = 0; i < 5; i++) {  // 5 ciclos de la animación
                 // Primera etapa: .
                 System.out.print("Cerrando sesión: .  \r");
                 Thread.sleep(250);
